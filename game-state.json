@@ -1,0 +1,19 @@
+{
+  "playerPosition": 5,
+  "enemies": [
+    {
+      "x": 2,
+      "y": 1,
+      "id": 1
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "id": 2
+    }
+  ],
+  "bullets": [],
+  "score": 0,
+  "gameOver": false,
+  "lastUpdate": "2026-02-01T18:17:14.797955"
+}

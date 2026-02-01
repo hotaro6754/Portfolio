@@ -1,0 +1,147 @@
+name: Space Shooter Game
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Game action'
+        required: true
+        default: 'new'
+        type: choice
+        options:
+          - left
+          - right
+          - shoot
+          - new
+  
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update-game:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Extract action from issue
+        id: extract-action
+        run: |
+          if [ "${{ github.event_name }}" == "issues" ]; then
+            # Extract action from issue labels
+            LABELS='${{ toJson(github.event.issue.labels) }}'
+            echo "Labels: $LABELS"
+            
+            # Parse labels to find game action
+            ACTION=""
+            if echo "$LABELS" | grep -q "game-action-left"; then
+              ACTION="left"
+            elif echo "$LABELS" | grep -q "game-action-right"; then
+              ACTION="right"
+            elif echo "$LABELS" | grep -q "game-action-shoot"; then
+              ACTION="shoot"
+            elif echo "$LABELS" | grep -q "game-action-new"; then
+              ACTION="new"
+            fi
+            
+            if [ -z "$ACTION" ]; then
+              echo "No game action found in issue labels. Skipping."
+              echo "skip=true" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+            
+            echo "action=$ACTION" >> $GITHUB_OUTPUT
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+          else
+            # Manual trigger
+            echo "action=${{ inputs.action }}" >> $GITHUB_OUTPUT
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Update game state
+        if: steps.extract-action.outputs.skip != 'true'
+        run: |
+          ACTION="${{ steps.extract-action.outputs.action }}"
+          echo "Processing action: $ACTION"
+          python scripts/update_game_state.py "$ACTION"
+      
+      - name: Generate game SVG
+        if: steps.extract-action.outputs.skip != 'true'
+        run: |
+          python scripts/generate_game_svg.py
+          echo "Game SVG generated"
+      
+      - name: Update README
+        if: steps.extract-action.outputs.skip != 'true'
+        run: |
+          # Read the generated SVG
+          SVG_CONTENT=$(cat game.svg)
+          
+          # Create a temporary file with updated README
+          python - <<EOF
+          import re
+          
+          # Read README
+          with open('README.md', 'r') as f:
+              readme = f.read()
+          
+          # Read SVG
+          with open('game.svg', 'r') as f:
+              svg = f.read()
+          
+          # Find the game section and replace it
+          # Looking for the section between "## 🎮 GitHub Space Shooter Game" and the next "---"
+          pattern = r'(## 🎮 GitHub Space Shooter Game\n\n).*?(\n\n---)'
+          
+          replacement = r'\1' + svg + r'\2'
+          
+          new_readme = re.sub(pattern, replacement, readme, flags=re.DOTALL)
+          
+          # Write updated README
+          with open('README.md', 'w') as f:
+              f.write(new_readme)
+          
+          print("README updated successfully!")
+          EOF
+      
+      - name: Commit and push changes
+        if: steps.extract-action.outputs.skip != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add game-state.json game.svg README.md
+          git diff --staged --quiet || git commit -m "🎮 Space Shooter: Action ${{ steps.extract-action.outputs.action }}"
+          git push
+      
+      - name: Close issue
+        if: steps.extract-action.outputs.skip != 'true' && github.event_name == 'issues'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ steps.extract-action.outputs.issue_number }},
+              state: 'closed'
+            });
+            
+            // Add a comment
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ steps.extract-action.outputs.issue_number }},
+              body: '🎮 Game action processed! Check the [README](https://github.com/${{ github.repository }}) for the updated game state.'
+            });
