@@ -176,4 +176,34 @@ This portfolio and all projects are open source. Feel free to fork, clone, and u
 
 ---
 
-**Last Updated**: 2026-02-01 18:06:11 | **Repository**: [hotaro6754](https://github.com/hotaro6754) | **Status**: 🚀 Active Development
+![TryHackMe](https://img.shields.io/badge/TryHackMe-Profile-brightgreen?style=flat-square&logo=tryhackme)
+![HackTheBox](https://img.shields.io/badge/HackTheBox-Profile-blue?style=flat-square&logo=hackthebox)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=hotaro6754&show_icons=true&theme=dark)
+![Streak Stats](https://github-readme-streak-stats.herokuapp.com/?user=hotaro6754&theme=dark)
+![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=hotaro6754&theme=dark)
+![Trophy](https://github-profile-trophy.vercel.app/?username=hotaro6754&theme=dark)
+![Typing SVG](https://readme-typing-svg.herokuapp.com?size=30&color=00FF00&center=true&vCenter=true&lines=Live+the+hacker+life;All+your+base+are+belong+to+us;That%27s+what+she+said;I+am+the+shadow+of+the+moon;The+dark+side+is+not+that+bad)
+
+### Matrix-style Profile Views Counter
+![Profile Views](https://shields.io/badge/views-1337-brightgreen?style=flat-square&logo=virustotal)
+
+---
+
+## 🎨 Enhanced Color Scheme
+
+### Contribution Graph
+![Contribution Graph](https://github-profile-summary-cards.vercel.app/api/cards/last-commit-activity.svg?username=hotaro6754&theme=dark)
+
+### Additional Sections
+- **Offensive Security Tools**
+  - Burp Suite
+  - Metasploit
+  - nmap
+- **CTF Writeups Section**
+  - Include write-ups for CTF challenges
+- **Bug Bounty Section**
+  - Include details of bug bounty programs I’ve participated in
+
+---
+
+**Last Updated**: 2026-02-01 18:08:04 | **Repository**: [hotaro6754](https://github.com/hotaro6754) | **Status**: 🚀 Active Development
