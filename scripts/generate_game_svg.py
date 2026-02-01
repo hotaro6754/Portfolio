@@ -17,6 +17,7 @@ BOARD_HEIGHT = GRID_HEIGHT * CELL_SIZE
 MARGIN_TOP = 80
 MARGIN_BOTTOM = 100
 SVG_WIDTH = BOARD_WIDTH + 100
+# SVG_HEIGHT = 500 (board) + 80 (top) + 100 (bottom) = 680 total
 SVG_HEIGHT = BOARD_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM
 
 # Colors - matching the red/green cybersecurity theme
