@@ -24,6 +24,13 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
 # OS specific
 .Spotlight-V100
 .Trashes

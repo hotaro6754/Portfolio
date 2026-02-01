@@ -10,9 +10,75 @@
 
 ## 🎮 GitHub Space Shooter Game
 
-![GitHub Space Shooter](https://github.com/hotaro6754/hotaro6754/actions/workflows/space-shooter.yml/badge.svg)
-
-**Play the game on my profile!** Click the badge above to start playing the Space Shooter game directly on my GitHub profile. Test your skills and see if you can beat the high score!
+<svg width="600" height="680" 
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <!-- Background -->
+    <rect width="600" height="680" fill="#0d1117"/>
+    
+    <!-- Title -->
+    <text x="300.0" y="30" fill="#00ff00" 
+          font-family="'Courier New', monospace" font-size="24" 
+          font-weight="bold" text-anchor="middle">🎮 SPACE SHOOTER 🎮</text>
+    
+    <!-- Score -->
+    <text x="300.0" y="60" fill="#00ff00" 
+          font-family="'Courier New', monospace" font-size="18" 
+          text-anchor="middle">SCORE: 0</text>
+    
+    <!-- Game Board -->
+    <rect x="50.0" y="80" width="500" height="500" 
+          fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+    <line x1="50.0" y1="80" x2="50.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="100.0" y1="80" x2="100.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="150.0" y1="80" x2="150.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="200.0" y1="80" x2="200.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="250.0" y1="80" x2="250.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="300.0" y1="80" x2="300.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="350.0" y1="80" x2="350.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="400.0" y1="80" x2="400.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="450.0" y1="80" x2="450.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="500.0" y1="80" x2="500.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="550.0" y1="80" x2="550.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="80" x2="550.0" y2="80" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="130" x2="550.0" y2="130" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="180" x2="550.0" y2="180" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="230" x2="550.0" y2="230" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="280" x2="550.0" y2="280" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="330" x2="550.0" y2="330" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="380" x2="550.0" y2="380" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="430" x2="550.0" y2="430" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="480" x2="550.0" y2="480" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="530" x2="550.0" y2="530" stroke="#30363d" stroke-width="1" opacity="0.3"/><line x1="50.0" y1="580" x2="550.0" y2="580" stroke="#30363d" stroke-width="1" opacity="0.3"/>
+        <text x="175.0" y="170.0" fill="#ff0000" 
+              font-size="40" text-anchor="middle">👾</text>
+        
+        <text x="425.0" y="220.0" fill="#ff0000" 
+              font-size="40" text-anchor="middle">👾</text>
+        
+        <text x="325.0" y="570.0" fill="#00ff00" 
+              font-size="40" text-anchor="middle">🚀</text>
+        
+    <a href="https://github.com/hotaro6754/hotaro6754/issues/new?labels=game-action-left&title=Space+Shooter:+Left" target="_blank" style="pointer-events:all;">
+        <g opacity="1">
+            <rect x="85.0" y="600" width="100" height="40" 
+                  fill="#1a1e24" stroke="#00ff00" stroke-width="2" rx="5"/>
+            <text x="135.0" y="625.0" 
+                  fill="#00ff00" font-family="'Courier New', monospace" 
+                  font-size="14" font-weight="bold" text-anchor="middle">◄ LEFT</text>
+        </g>
+    </a>
+    <a href="https://github.com/hotaro6754/hotaro6754/issues/new?labels=game-action-shoot&title=Space+Shooter:+Shoot" target="_blank" style="pointer-events:all;">
+        <g opacity="1">
+            <rect x="195.0" y="600" width="100" height="40" 
+                  fill="#1a1e24" stroke="#00ff00" stroke-width="2" rx="5"/>
+            <text x="245.0" y="625.0" 
+                  fill="#00ff00" font-family="'Courier New', monospace" 
+                  font-size="14" font-weight="bold" text-anchor="middle">SHOOT 🔥</text>
+        </g>
+    </a>
+    <a href="https://github.com/hotaro6754/hotaro6754/issues/new?labels=game-action-right&title=Space+Shooter:+Right" target="_blank" style="pointer-events:all;">
+        <g opacity="1">
+            <rect x="305.0" y="600" width="100" height="40" 
+                  fill="#1a1e24" stroke="#00ff00" stroke-width="2" rx="5"/>
+            <text x="355.0" y="625.0" 
+                  fill="#00ff00" font-family="'Courier New', monospace" 
+                  font-size="14" font-weight="bold" text-anchor="middle">RIGHT ►</text>
+        </g>
+    </a>
+    <a href="https://github.com/hotaro6754/hotaro6754/issues/new?labels=game-action-new&title=Space+Shooter:+New" target="_blank" style="pointer-events:all;">
+        <g opacity="1">
+            <rect x="415.0" y="600" width="100" height="40" 
+                  fill="#1a1e24" stroke="#00ff00" stroke-width="2" rx="5"/>
+            <text x="465.0" y="625.0" 
+                  fill="#00ff00" font-family="'Courier New', monospace" 
+                  font-size="14" font-weight="bold" text-anchor="middle">NEW GAME</text>
+        </g>
+    </a>
+    <text x="300.0" y="670" fill="#00ff00" 
+          font-family="'Courier New', monospace" font-size="12" 
+          text-anchor="middle" opacity="0.7">Click buttons to play! Destroy enemies before they reach you!</text>
+    </svg>
 
 ---
 
