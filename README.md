@@ -8,9 +8,17 @@
 
 ---
 
+## 🎮 GitHub Space Shooter Game
+
+![GitHub Space Shooter](https://github.com/hotaro6754/hotaro6754/actions/workflows/space-shooter.yml/badge.svg)
+
+**Play the game on my profile!** Click the badge above to start playing the Space Shooter game directly on my GitHub profile. Test your skills and see if you can beat the high score!
+
+---
+
 ## 🚀 About Me
 
-I am an aspiring Offensive Security Engineer with a passion for breaking systems to build them stronger. Currently exploring the depths of **Linux Automation**, **Active Directory Exploitation**, and writing custom security tools in **Python** and **Bash**.
+I am an aspiring Offensive Security Engineer with a passion for breaking systems to build them stronger. Currently exploring the depths of **Linux Automation**, **Active Directory Exploitation**, and building custom pentesting tools.
 
 ### 🎓 Background
 - **Education**: 1st Year B.Tech in Computer Science & Engineering
@@ -93,7 +101,7 @@ Automating initial enumeration with Nmap, Gobuster, and Nikto scans.
 - **KLCP** (Kali Linux Certified Professional)
 - **OSWP** (Offensive Security Wireless Professional)
 - **CCNA** (Cisco Certified Network Associate)
-- **AWS Security Certification**
+- **AWS Security Certification)
 
 ---
 
@@ -168,4 +176,4 @@ This portfolio and all projects are open source. Feel free to fork, clone, and u
 
 ---
 
-**Last Updated**: November 24, 2025 | **Repository**: [hotaro6754](https://github.com/hotaro6754) | **Status**: 🚀 Active Development
+**Last Updated**: 2026-02-01 18:06:11 | **Repository**: [hotaro6754](https://github.com/hotaro6754) | **Status**: 🚀 Active Development
